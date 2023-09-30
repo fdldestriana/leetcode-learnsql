@@ -1,0 +1,18 @@
+1. Invalid Tweets
+problem: find invalid tweet that greater than 15 characters
+solution:	select tweet_id from Tweets
+		where length(content) > 15;
+
+2. Replace Employee ID With The Unique Identifier
+problem: show the unique ID of each user, if doesnt have replace with null
+solution:	select EmployeeUNI.unique_id, Employees.name from Employees
+		left join EmployeeUNI on EmployeeUNI.id=Employees.id;
+
+3. Product Sales Analysis 1
+problem: select product_name, year, and price for each sale_id from Sales table
+solution:	select Product.product_name, Sales.year, Sales.price from Sales
+		inner join Product on Product.product_id=Sales.product_id;
+
+4. Customer Who Visited but Did Not Make Any Transactions
+problem: find ids of costumer who visit w/o transactions and number of the same visit
+solution:
